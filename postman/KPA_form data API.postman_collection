@@ -1,0 +1,524 @@
+{
+	"info": {
+		"_postman_id": "12d3b28c-1b44-4121-9f48-d32cac1a50b2",
+		"name": "KPA_form data",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25849559"
+	},
+	"item": [
+		{
+			"name": "Wheel specification POST",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"formNumber\": \"WHEEL-2025-005\",\r\n  \"submittedBy\": \"Dipti\",\r\n  \"submittedDate\": \"2025-07-30\",\r\n  \"fields\": {\r\n    \"treadDiameterNew\": \"915 (900-1000)\",\r\n    \"lastShopIssueSize\": \"837 (800-900)\",\r\n    \"condemningDia\": \"825 (800-900)\",\r\n    \"wheelGauge\": \"1600 (+2,-1)\",\r\n    \"variationSameAxle\": \"0.5\",\r\n    \"variationSameBogie\": \"5\",\r\n    \"variationSameCoach\": \"13\",\r\n    \"wheelProfile\": \"29.4 Flange Thickness\",\r\n    \"intermediateWWP\": \"20 TO 28\",\r\n    \"bearingSeatDiameter\": \"130.043 TO 130.068\",\r\n    \"rollerBearingOuterDia\": \"280 (+0.0/-0.035)\",\r\n    \"rollerBearingBoreDia\": \"130 (+0.0/-0.025)\",\r\n    \"rollerBearingWidth\": \"93 (+0/-0.250)\",\r\n    \"axleBoxHousingBoreDia\": \"280 (+0.030/+0.052)\",\r\n    \"wheelDiscWidth\": \"127 (+4/-0)\"\r\n  }\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/api/forms/wheel-specifications",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"forms",
+						"wheel-specifications"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Wheel specification POST",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"formNumber\": \"WHEEL-2025-005\",\r\n  \"submittedBy\": \"Dipti\",\r\n  \"submittedDate\": \"2025-07-30\",\r\n  \"fields\": {\r\n    \"treadDiameterNew\": \"915 (900-1000)\",\r\n    \"lastShopIssueSize\": \"837 (800-900)\",\r\n    \"condemningDia\": \"825 (800-900)\",\r\n    \"wheelGauge\": \"1600 (+2,-1)\",\r\n    \"variationSameAxle\": \"0.5\",\r\n    \"variationSameBogie\": \"5\",\r\n    \"variationSameCoach\": \"13\",\r\n    \"wheelProfile\": \"29.4 Flange Thickness\",\r\n    \"intermediateWWP\": \"20 TO 28\",\r\n    \"bearingSeatDiameter\": \"130.043 TO 130.068\",\r\n    \"rollerBearingOuterDia\": \"280 (+0.0/-0.035)\",\r\n    \"rollerBearingBoreDia\": \"130 (+0.0/-0.025)\",\r\n    \"rollerBearingWidth\": \"93 (+0/-0.250)\",\r\n    \"axleBoxHousingBoreDia\": \"280 (+0.030/+0.052)\",\r\n    \"wheelDiscWidth\": \"127 (+4/-0)\"\r\n  }\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/forms/wheel-specifications",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"forms",
+								"wheel-specifications"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Date",
+							"value": "Thu, 31 Jul 2025 10:43:03 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.13.5"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, POST, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "179"
+						},
+						{
+							"key": "Vary",
+							"value": "Cookie"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"message\": \"Wheel specification submitted successfully.\",\n    \"data\": {\n        \"formNumber\": \"WHEEL-2025-005\",\n        \"submittedBy\": \"Dipti\",\n        \"submittedDate\": \"2025-07-30\",\n        \"status\": \"SAVED\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Wheel Specification GET",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/api/forms/wheel-specifications?formNumber=WHEEL-2025-001&submittedBy=user_id_123&submittedDate=2025-07-03",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"forms",
+						"wheel-specifications"
+					],
+					"query": [
+						{
+							"key": "formNumber",
+							"value": "WHEEL-2025-001"
+						},
+						{
+							"key": "submittedBy",
+							"value": "user_id_123"
+						},
+						{
+							"key": "submittedDate",
+							"value": "2025-07-03"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Wheel Specification GET",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/forms/wheel-specifications?formNumber=WHEEL-2025-001&submittedBy=user_id_123&submittedDate=2025-07-03",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"forms",
+								"wheel-specifications"
+							],
+							"query": [
+								{
+									"key": "formNumber",
+									"value": "WHEEL-2025-001"
+								},
+								{
+									"key": "submittedBy",
+									"value": "user_id_123"
+								},
+								{
+									"key": "submittedDate",
+									"value": "2025-07-03"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Date",
+							"value": "Thu, 31 Jul 2025 10:47:50 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.13.5"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, POST, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "733"
+						},
+						{
+							"key": "Vary",
+							"value": "Cookie"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"message\": \"Filtered wheel specification forms fetched successfully.\",\n    \"data\": [\n        {\n            \"formNumber\": \"WHEEL-2025-001\",\n            \"submittedBy\": \"user_id_123\",\n            \"submittedDate\": \"2025-07-03\",\n            \"fields\": {\n                \"wheelGauge\": \"1600 (+2,-1)\",\n                \"wheelProfile\": \"29.4 Flange Thickness\",\n                \"condemningDia\": \"825 (800-900)\",\n                \"wheelDiscWidth\": \"127 (+4/-0)\",\n                \"intermediateWWP\": \"20 TO 28\",\n                \"treadDiameterNew\": \"915 (900-1000)\",\n                \"lastShopIssueSize\": \"837 (800-900)\",\n                \"variationSameAxle\": \"0.5\",\n                \"rollerBearingWidth\": \"93 (+0/-0.250)\",\n                \"variationSameBogie\": \"5\",\n                \"variationSameCoach\": \"13\",\n                \"bearingSeatDiameter\": \"130.043 TO 130.068\",\n                \"rollerBearingBoreDia\": \"130 (+0.0/-0.025)\",\n                \"axleBoxHousingBoreDia\": \"280 (+0.030/+0.052)\",\n                \"rollerBearingOuterDia\": \"280 (+0.0/-0.035)\"\n            },\n            \"status\": \"SAVED\"\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Bogie Checksheet POST",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\r\n\r\n \"formNumber\": \"B01\",\r\n  \"submittedBy\": \"Dipti\",\r\n  \"submittedDate\": \"2025-07-30\",\r\n  \"inspectionBy\": \"Inspector Name\",\r\n  \"inspectionDate\": \"2025-07-30\",\r\n  \"bogieDetails\": {\r\n    \"bogieNo\": \"BG123\",\r\n    \"dateOfIOH\": \"2025-07-20\",\r\n    \"deficitComponents\": \"None\",\r\n    \"incomingDivAndDate\": \"WR/2025-07-19\",\r\n    \"makerYearBuilt\": \"BEML/2018\"\r\n  },\r\n  \"bogieChecksheet\": {\r\n    \"axleGuide\": \"Good\",\r\n    \"bogieFrameCondition\": \"Good\",\r\n    \"bolster\": \"OK\",\r\n    \"bolsterSuspensionBracket\": \"Intact\",\r\n    \"lowerSpringSeat\": \"New\"\r\n  },\r\n  \"bmbcChecksheet\": {\r\n    \"adjustingTube\": \"Tight\",\r\n    \"cylinderBody\": \"No damage\",\r\n    \"pistonTrunnion\": \"Smooth\",\r\n    \"plungerSpring\": \"New\"\r\n  }\r\n}\r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/api/forms/bogie-checksheet/",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"forms",
+						"bogie-checksheet",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Bogie Checksheet POST",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"formNumber\": \"BOGIE-2025-003\",\r\n  \"inspectionBy\": \"user_id_456\",\r\n  \"inspectionDate\": \"2025-07-03\",\r\n  \"bogieDetails\": {\r\n    \"bogieNo\": \"BG1234\",\r\n    \"makerYearBuilt\": \"RDSO/2018\",\r\n    \"incomingDivAndDate\": \"NR / 2025-06-25\",\r\n    \"deficitComponents\": \"None\",\r\n    \"dateOfIOH\": \"2025-07-01\"\r\n  },\r\n  \"bogieChecksheet\": {\r\n    \"bogieFrameCondition\": \"Good\",\r\n    \"bolster\": \"Good\",\r\n    \"bolsterSuspensionBracket\": \"Cracked\",\r\n    \"lowerSpringSeat\": \"Good\",\r\n    \"axleGuide\": \"Worn\"\r\n  },\r\n  \"bmbcChecksheet\": {\r\n    \"cylinderBody\": \"WORN OUT\",\r\n    \"pistonTrunnion\": \"GOOD\",\r\n    \"adjustingTube\": \"DAMAGED\",\r\n    \"plungerSpring\": \"GOOD\"\r\n  }\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/forms/bogie-checksheet",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"forms",
+								"bogie-checksheet"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Date",
+							"value": "Thu, 31 Jul 2025 10:56:39 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.13.5"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, POST, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "184"
+						},
+						{
+							"key": "Vary",
+							"value": "Cookie"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"message\": \"Bogie checksheet submitted successfully.\",\n    \"data\": {\n        \"formNumber\": \"BOGIE-2025-003\",\n        \"inspectionBy\": \"user_id_456\",\n        \"inspectionDate\": \"2025-07-03\",\n        \"status\": \"SAVED\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Bogie Checksheet GET",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"formNumber\": \"BOGIE-2025-004\",\r\n  \"inspectionBy\": \"user_id_456\",\r\n  \"inspectionDate\": \"2025-07-03\",\r\n  \"bogieDetails\": {\r\n    \"bogieNo\": \"BG1234\",\r\n    \"makerYearBuilt\": \"RDSO/2018\",\r\n    \"incomingDivAndDate\": \"NR / 2025-06-25\",\r\n    \"deficitComponents\": \"None\",\r\n    \"dateOfIOH\": \"2025-07-01\"\r\n  },\r\n  \"bogieChecksheet\": {\r\n    \"bogieFrameCondition\": \"Good\",\r\n    \"bolster\": \"Good\",\r\n    \"bolsterSuspensionBracket\": \"Cracked\",\r\n    \"lowerSpringSeat\": \"Good\",\r\n    \"axleGuide\": \"Worn\"\r\n  },\r\n  \"bmbcChecksheet\": {\r\n    \"cylinderBody\": \"WORN OUT\",\r\n    \"pistonTrunnion\": \"GOOD\",\r\n    \"adjustingTube\": \"DAMAGED\",\r\n    \"plungerSpring\": \"GOOD\"\r\n  }\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/api/forms/bogie-checksheet/",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"forms",
+						"bogie-checksheet",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Bogie Checksheet POST",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"formNumber\": \"BOGIE-2025-003\",\r\n  \"inspectionBy\": \"user_id_456\",\r\n  \"inspectionDate\": \"2025-07-03\",\r\n  \"bogieDetails\": {\r\n    \"bogieNo\": \"BG1234\",\r\n    \"makerYearBuilt\": \"RDSO/2018\",\r\n    \"incomingDivAndDate\": \"NR / 2025-06-25\",\r\n    \"deficitComponents\": \"None\",\r\n    \"dateOfIOH\": \"2025-07-01\"\r\n  },\r\n  \"bogieChecksheet\": {\r\n    \"bogieFrameCondition\": \"Good\",\r\n    \"bolster\": \"Good\",\r\n    \"bolsterSuspensionBracket\": \"Cracked\",\r\n    \"lowerSpringSeat\": \"Good\",\r\n    \"axleGuide\": \"Worn\"\r\n  },\r\n  \"bmbcChecksheet\": {\r\n    \"cylinderBody\": \"WORN OUT\",\r\n    \"pistonTrunnion\": \"GOOD\",\r\n    \"adjustingTube\": \"DAMAGED\",\r\n    \"plungerSpring\": \"GOOD\"\r\n  }\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/forms/bogie-checksheet",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"forms",
+								"bogie-checksheet"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Date",
+							"value": "Thu, 31 Jul 2025 10:56:39 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.13.5"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, POST, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "184"
+						},
+						{
+							"key": "Vary",
+							"value": "Cookie"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"message\": \"Bogie checksheet submitted successfully.\",\n    \"data\": {\n        \"formNumber\": \"BOGIE-2025-003\",\n        \"inspectionBy\": \"user_id_456\",\n        \"inspectionDate\": \"2025-07-03\",\n        \"status\": \"SAVED\"\n    }\n}"
+				},
+				{
+					"name": "Bogie Checksheet GET",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"formNumber\": \"BOGIE-2025-004\",\r\n  \"inspectionBy\": \"user_id_456\",\r\n  \"inspectionDate\": \"2025-07-03\",\r\n  \"bogieDetails\": {\r\n    \"bogieNo\": \"BG1234\",\r\n    \"makerYearBuilt\": \"RDSO/2018\",\r\n    \"incomingDivAndDate\": \"NR / 2025-06-25\",\r\n    \"deficitComponents\": \"None\",\r\n    \"dateOfIOH\": \"2025-07-01\"\r\n  },\r\n  \"bogieChecksheet\": {\r\n    \"bogieFrameCondition\": \"Good\",\r\n    \"bolster\": \"Good\",\r\n    \"bolsterSuspensionBracket\": \"Cracked\",\r\n    \"lowerSpringSeat\": \"Good\",\r\n    \"axleGuide\": \"Worn\"\r\n  },\r\n  \"bmbcChecksheet\": {\r\n    \"cylinderBody\": \"WORN OUT\",\r\n    \"pistonTrunnion\": \"GOOD\",\r\n    \"adjustingTube\": \"DAMAGED\",\r\n    \"plungerSpring\": \"GOOD\"\r\n  }\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/forms/bogie-checksheet/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"forms",
+								"bogie-checksheet",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Fri, 01 Aug 2025 09:37:05 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.13.5"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, POST, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "3749"
+						},
+						{
+							"key": "Vary",
+							"value": "Cookie"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"message\": \"Filtered bogie checksheet forms fetched successfully.\",\n    \"data\": [\n        {\n            \"formNumber\": \"BOGIE-2025-004\",\n            \"inspectionBy\": \"user_id_456\",\n            \"inspectionDate\": \"2025-07-03\",\n            \"bogie_details\": {\n                \"bogieNo\": \"BG1234\",\n                \"dateOfIOH\": \"2025-07-01\",\n                \"makerYearBuilt\": \"RDSO/2018\",\n                \"deficitComponents\": \"None\",\n                \"incomingDivAndDate\": \"NR / 2025-06-25\"\n            },\n            \"bogie_checksheet\": {\n                \"bolster\": \"Good\",\n                \"axleGuide\": \"Worn\",\n                \"lowerSpringSeat\": \"Good\",\n                \"bogieFrameCondition\": \"Good\",\n                \"bolsterSuspensionBracket\": \"Cracked\"\n            },\n            \"bmbc_checksheet\": {\n                \"cylinderBody\": \"WORN OUT\",\n                \"adjustingTube\": \"DAMAGED\",\n                \"plungerSpring\": \"GOOD\",\n                \"pistonTrunnion\": \"GOOD\"\n            },\n            \"status\": \"SAVED\"\n        },\n        {\n            \"formNumber\": \"string2\",\n            \"inspectionBy\": \"string\",\n            \"inspectionDate\": \"2025-02-02\",\n            \"bogie_details\": {\n                \"bogieNo\": \"string\",\n                \"dateOfIOH\": \"string\",\n                \"makerYearBuilt\": \"string\",\n                \"deficitComponents\": \"string\",\n                \"incomingDivAndDate\": \"string\"\n            },\n            \"bogie_checksheet\": {\n                \"bolster\": \"string\",\n                \"axleGuide\": \"string\",\n                \"lowerSpringSeat\": \"string\",\n                \"bogieFrameCondition\": \"string\",\n                \"bolsterSuspensionBracket\": \"string\"\n            },\n            \"bmbc_checksheet\": {\n                \"cylinderBody\": \"string\",\n                \"adjustingTube\": \"string\",\n                \"plungerSpring\": \"string\",\n                \"pistonTrunnion\": \"string\"\n            },\n            \"status\": \"SAVED\"\n        },\n        {\n            \"formNumber\": \"string1\",\n            \"inspectionBy\": \"string\",\n            \"inspectionDate\": \"2026-02-02\",\n            \"bogie_details\": {\n                \"bogieNo\": \"string\",\n                \"dateOfIOH\": \"string\",\n                \"makerYearBuilt\": \"string\",\n                \"deficitComponents\": \"string\",\n                \"incomingDivAndDate\": \"string\"\n            },\n            \"bogie_checksheet\": {\n                \"bolster\": \"string\",\n                \"axleGuide\": \"string\",\n                \"lowerSpringSeat\": \"string\",\n                \"bogieFrameCondition\": \"string\",\n                \"bolsterSuspensionBracket\": \"string\"\n            },\n            \"bmbc_checksheet\": {\n                \"cylinderBody\": \"string\",\n                \"adjustingTube\": \"string\",\n                \"plungerSpring\": \"string\",\n                \"pistonTrunnion\": \"string\"\n            },\n            \"status\": \"SAVED\"\n        },\n        {\n            \"formNumber\": \"BOGIE-2025-003\",\n            \"inspectionBy\": \"user_id_456\",\n            \"inspectionDate\": \"2025-07-03\",\n            \"bogie_details\": {\n                \"bogieNo\": \"BG1234\",\n                \"dateOfIOH\": \"2025-07-01\",\n                \"makerYearBuilt\": \"RDSO/2018\",\n                \"deficitComponents\": \"None\",\n                \"incomingDivAndDate\": \"NR / 2025-06-25\"\n            },\n            \"bogie_checksheet\": {\n                \"bolster\": \"Good\",\n                \"axleGuide\": \"Worn\",\n                \"lowerSpringSeat\": \"Good\",\n                \"bogieFrameCondition\": \"Good\",\n                \"bolsterSuspensionBracket\": \"Cracked\"\n            },\n            \"bmbc_checksheet\": {\n                \"cylinderBody\": \"WORN OUT\",\n                \"adjustingTube\": \"DAMAGED\",\n                \"plungerSpring\": \"GOOD\",\n                \"pistonTrunnion\": \"GOOD\"\n            },\n            \"status\": \"SAVED\"\n        },\n        {\n            \"formNumber\": \"BOGIE-2025-002\",\n            \"inspectionBy\": \"Dipti\",\n            \"inspectionDate\": \"2025-07-30\",\n            \"bogie_details\": {\n                \"bogieNo\": \"BG123\",\n                \"dateOfIOH\": \"2025-07-20\",\n                \"makerYearBuilt\": \"BEML/2018\",\n                \"deficitComponents\": \"None\",\n                \"incomingDivAndDate\": \"WR / 2025-07-19\"\n            },\n            \"bogie_checksheet\": {\n                \"bolster\": \"OK\",\n                \"axleGuide\": \"Good\",\n                \"lowerSpringSeat\": \"New\",\n                \"bogieFrameCondition\": \"Good\",\n                \"bolsterSuspensionBracket\": \"Intact\"\n            },\n            \"bmbc_checksheet\": {\n                \"cylinderBody\": \"No damage\",\n                \"adjustingTube\": \"Tight\",\n                \"plungerSpring\": \"New\",\n                \"pistonTrunnion\": \"Smooth\"\n            },\n            \"status\": \"SAVED\"\n        },\n        {\n            \"formNumber\": \"BOGIE-2025-001\",\n            \"inspectionBy\": \"user_id_456\",\n            \"inspectionDate\": \"2025-07-03\",\n            \"bogie_details\": {\n                \"bogieNo\": \"BG1234\",\n                \"dateOfIOH\": \"2025-07-01\",\n                \"makerYearBuilt\": \"RDSO/2018\",\n                \"deficitComponents\": \"None\",\n                \"incomingDivAndDate\": \"NR / 2025-06-25\"\n            },\n            \"bogie_checksheet\": {\n                \"bolster\": \"Good\",\n                \"axleGuide\": \"Worn\",\n                \"lowerSpringSeat\": \"Good\",\n                \"bogieFrameCondition\": \"Good\",\n                \"bolsterSuspensionBracket\": \"Cracked\"\n            },\n            \"bmbc_checksheet\": {\n                \"cylinderBody\": \"WORN OUT\",\n                \"adjustingTube\": \"DAMAGED\",\n                \"plungerSpring\": \"GOOD\",\n                \"pistonTrunnion\": \"GOOD\"\n            },\n            \"status\": \"SAVED\"\n        },\n        {\n            \"formNumber\": \"string\",\n            \"inspectionBy\": \"string\",\n            \"inspectionDate\": \"2026-02-02\",\n            \"bogie_details\": {\n                \"bogieNo\": \"string\",\n                \"dateOfIOH\": \"string\",\n                \"makerYearBuilt\": \"string\",\n                \"deficitComponents\": \"string\",\n                \"incomingDivAndDate\": \"string\"\n            },\n            \"bogie_checksheet\": {\n                \"bolster\": \"string\",\n                \"axleGuide\": \"string\",\n                \"lowerSpringSeat\": \"string\",\n                \"bogieFrameCondition\": \"string\",\n                \"bolsterSuspensionBracket\": \"string\"\n            },\n            \"bmbc_checksheet\": {\n                \"cylinderBody\": \"string\",\n                \"adjustingTube\": \"string\",\n                \"plungerSpring\": \"string\",\n                \"pistonTrunnion\": \"string\"\n            },\n            \"status\": \"SAVED\"\n        }\n    ]\n}"
+				}
+			]
+		}
+	]
+}
