@@ -66,8 +66,6 @@ This project is a Django Rest Framework (DRF) API that lets users submit and vie
 
 **Endpoint**: `/api/forms/wheel-specifications/`
 
-**Methods**: `GET`, `POST`, `HEAD`, `OPTIONS`
-
 #### POST - Create Wheel Specification
 Creates a new wheel specification form entry.
 
