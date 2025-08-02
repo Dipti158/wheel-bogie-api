@@ -22,8 +22,9 @@ This project is a Django Rest Framework (DRF) API that lets users submit and vie
 ### Prerequisites
 - Python 3.13.5 or higher
 - pip (Python package installer)
-- Virtual environment 
-- Postman
+- Virtual environment (recommended)
+- Postman (for API testing)
+- Postgresql
 
 ### Installation Steps
 
