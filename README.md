@@ -16,42 +16,20 @@ This project is a Django Rest Framework (DRF) API that lets users submit and vie
 
 - Swagger UI – API testing and visualization
 
-  
-
-### Setup Instructions
-
-1. Clone the repository  
-```bash
-git clone https://github.com/yourusername/yourproject.git
-
-
-# KPA Form Data API
-
-A Django REST Framework-based API for managing railway wheel specifications and bogie checksheet forms. This system provides endpoints for creating, retrieving, and managing technical inspection data for railway components.
-
-## Technologies & Tech Stack
-
-- **Backend Framework**: Django 4.x with Django REST Framework (DRF)
-- **Python Version**: Python 3.13.5
-- **Web Server**: WSGIServer (Development)
-- **API Documentation**: drf-spectacular (OpenAPI/Swagger)
-- **Database**: Django ORM (SQLite by default, configurable)
-- **Authentication**: Django's built-in authentication system
-- **API Format**: JSON REST API
 
 ## Setup Instructions
 
 ### Prerequisites
 - Python 3.13.5 or higher
 - pip (Python package installer)
-- Virtual environment (recommended)
+- Virtual environment 
+- Postman
 
 ### Installation Steps
 
 1. **Clone the repository**
    ```bash
    git clone <repository-url>
-   cd kpa-form-data-api
    ```
 
 2. **Create and activate virtual environment**
@@ -59,15 +37,11 @@ A Django REST Framework-based API for managing railway wheel specifications and 
    python -m venv venv
    # On Windows
    venv\Scripts\activate
-   # On macOS/Linux
-   source venv/bin/activate
    ```
 
 3. **Install dependencies**
    ```bash
-   pip install django
-   pip install djangorestframework
-   pip install drf-spectacular
+    pip install -r requirements.txt
    ```
 
 4. **Run database migrations**
@@ -76,12 +50,7 @@ A Django REST Framework-based API for managing railway wheel specifications and 
    python manage.py migrate
    ```
 
-5. **Create superuser (optional)**
-   ```bash
-   python manage.py createsuperuser
-   ```
-
-6. **Start development server**
+5. **Start development server**
    ```bash
    python manage.py runserver
    ```
@@ -90,7 +59,6 @@ A Django REST Framework-based API for managing railway wheel specifications and 
    - API Base URL: `http://localhost:8000/`
    - Admin Panel: `http://localhost:8000/admin/`
    - API Documentation: `http://localhost:8000/api/docs/`
-   - ReDoc Documentation: `http://localhost:8000/api/redoc/`
 
 ## API Endpoints
 
@@ -145,11 +113,6 @@ Creates a new wheel specification form entry.
 
 #### GET - Retrieve Wheel Specifications
 Retrieves wheel specification forms with optional filtering.
-
-**Query Parameters**:
-- `formNumber`: Filter by form number
-- `submittedBy`: Filter by submitter
-- `submittedDate`: Filter by submission date
 
 **Example**: `/api/forms/wheel-specifications/?formNumber=WHEEL-2025-001&submittedBy=user_id_123&submittedDate=2025-07-03`
 
@@ -267,80 +230,18 @@ Retrieves bogie checksheet forms with optional filtering.
 }
 ```
 
-### 3. API Documentation Endpoints
-
-- **OpenAPI Schema**: `/api/schema/`
-- **Swagger UI**: `/api/docs/`
-- **ReDoc**: `/api/redoc/`
-
-## Response Headers
-
-All API responses include standard security headers:
-- `X-Frame-Options: DENY`
-- `X-Content-Type-Options: nosniff`
-- `Referrer-Policy: same-origin`
-- `Cross-Origin-Opener-Policy: same-origin`
-
-## Data Models
-
-### Wheel Specification Fields
-- **Technical Measurements**: Tread diameter, bearing dimensions, wheel gauge
-- **Tolerance Specifications**: Various dimensional tolerances and variations
-- **Metadata**: Form number, submitter, submission date
-
-### Bogie Checksheet Structure
-- **Bogie Details**: Bogie number, IOH date, maker information
-- **Inspection Data**: Component conditions and status
-- **BMBC Checksheet**: Brake cylinder inspection details
-
 ## Limitations & Assumptions
 
 ### Limitations
-1. **Authentication**: Currently uses basic Django authentication - no token-based auth implemented
-2. **Validation**: Limited field validation beyond basic type checking
+1. **Authentication**: Currently no auth implemented
+2. **Validation**: Limited field validation 
 3. **File Uploads**: No support for attachment uploads (images, documents)
-4. **Pagination**: No built-in pagination for large datasets
-5. **Search**: Basic filtering only - no full-text search capabilities
-6. **Audit Trail**: No comprehensive logging of form modifications
-7. **Notifications**: No automated notification system for form submissions
+4. **Search**: Basic filtering only 
 
-### Assumptions
-1. **Data Format**: All dimensional data stored as strings with tolerance information
-2. **User Management**: Users are managed through Django admin interface
-3. **Form Numbers**: Assumed to follow specific naming conventions (e.g., "WHEEL-2025-XXX")
-4. **Status Field**: All forms default to "SAVED" status
-5. **Date Format**: ISO date format (YYYY-MM-DD) expected for all date fields
-6. **Component Conditions**: Predefined set of condition values ("Good", "Worn", "Damaged", etc.)
-7. **Single Database**: Designed for single-instance deployment
-8. **Synchronous Processing**: All operations are synchronous - no background job processing
 
-### Technical Assumptions
-- SQLite database sufficient for current scale
-- Single-server deployment model
-- UTF-8 encoding for all text data
-- JSON content-type for all API communications
-- CORS not configured (same-origin policy applies)
 
-## Future Enhancements
 
-- Implement JWT authentication
-- Add comprehensive input validation
-- Include file upload capabilities
-- Add pagination and advanced search
-- Implement real-time notifications
-- Add comprehensive audit logging
-- Support for multi-language content
 
-## Testing
-
-Use the provided Postman collection (`KPA_form data API.postman_collection`) to test all endpoints. The collection includes:
-- Sample POST requests with valid data
-- GET requests with filtering examples
-- Expected response formats
-
-## Support
-
-For technical support or questions about the API, please contact the development team or refer to the API documentation at `/api/docs/`.
 
 
 
