@@ -44,6 +44,58 @@ This project is a Django Rest Framework (DRF) API that lets users submit and vie
     pip install -r requirements.txt
    ```
 
+4. **Set up PostgreSQL Database**
+   
+   **Option A: Create database manually**
+   ```sql
+   -- Connect to PostgreSQL as superuser
+   psql -U postgres
+   
+   -- Create database
+   CREATE DATABASE kpa_db;
+   
+   -- Create user (optional)
+   CREATE USER kpa_user WITH PASSWORD 'your_password';
+   GRANT ALL PRIVILEGES ON DATABASE kpa_db TO kpa_user;
+   ```
+   
+   **Option B: Use existing database**
+   - Ensure PostgreSQL is running
+   - Note your database credentials
+
+5. **Create environment variables file**
+   Create a `.env` file in the project root:
+   ```env
+   # Database Configuration
+   DB_NAME=kpa_db
+   DB_USER=postgres
+   DB_PASSWORD=your_password_here
+   DB_HOST=localhost
+   DB_PORT=5432
+   
+   # Django Configuration
+   SECRET_KEY=your-secret-key-here
+   DEBUG=True
+   
+   # CORS Configuration
+   CORS_ALLOW_ALL_ORIGINS=True
+   ```
+
+6. **Configure database settings**
+   Verify your `settings.py` contains:
+   ```python
+   DATABASES = {
+       'default': {
+           'ENGINE': 'django.db.backends.postgresql',
+           'NAME': os.getenv('DB_NAME', 'kpa_db'),
+           'USER': os.getenv('DB_USER', 'postgres'),
+           'PASSWORD': os.getenv('DB_PASSWORD', 'password'),
+           'HOST': os.getenv('DB_HOST', 'localhost'),
+           'PORT': os.getenv('DB_PORT', '5432'),
+       }
+   }
+   ```
+
 4. **Run database migrations**
    ```bash
    python manage.py makemigrations
@@ -189,44 +241,6 @@ Creates a new bogie checksheet inspection form.
 }
 ```
 
-#### GET - Retrieve Bogie Checksheets
-Retrieves bogie checksheet forms with optional filtering.
-
-**Response** (200 OK):
-```json
-{
-  "success": true,
-  "message": "Filtered bogie checksheet forms fetched successfully.",
-  "data": [
-    {
-      "formNumber": "BOGIE-2025-004",
-      "inspectionBy": "user_id_456",
-      "inspectionDate": "2025-07-03",
-      "bogie_details": {
-        "bogieNo": "BG1234",
-        "dateOfIOH": "2025-07-01",
-        "makerYearBuilt": "RDSO/2018",
-        "deficitComponents": "None",
-        "incomingDivAndDate": "NR / 2025-06-25"
-      },
-      "bogie_checksheet": {
-        "bolster": "Good",
-        "axleGuide": "Worn",
-        "lowerSpringSeat": "Good",
-        "bogieFrameCondition": "Good",
-        "bolsterSuspensionBracket": "Cracked"
-      },
-      "bmbc_checksheet": {
-        "cylinderBody": "WORN OUT",
-        "adjustingTube": "DAMAGED",
-        "plungerSpring": "GOOD",
-        "pistonTrunnion": "GOOD"
-      },
-      "status": "SAVED"
-    }
-  ]
-}
-```
 
 ## Limitations & Assumptions
 
@@ -235,12 +249,6 @@ Retrieves bogie checksheet forms with optional filtering.
 2. **Validation**: Limited field validation 
 3. **File Uploads**: No support for attachment uploads (images, documents)
 4. **Search**: Basic filtering only 
-
-
-
-
-
-
 
 
 
