@@ -48,8 +48,6 @@ This project is a Django Rest Framework (DRF) API that lets users submit and vie
    
    **Option A: Create database manually**
    ```sql
- 
-   -- Create database
    CREATE DATABASE kpa_db;
    ```
    
