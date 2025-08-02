@@ -25,10 +25,5 @@ This project is a Django Rest Framework (DRF) API that lets users submit and vie
 git clone https://github.com/yourusername/yourproject.git
 
 
-### Create Virtual Environment
 
-### For Windows:
-```bash
-python -m venv venv
-venv\Scripts\activate
 
