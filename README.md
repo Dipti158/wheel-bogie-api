@@ -29,7 +29,7 @@ This project is a Django Rest Framework (DRF) API that lets users submit and vie
 
 1. **Clone the repository**
    ```bash
-   git clone <repository-url>
+   git clone <your-repository-url>
    ```
 
 2. **Create and activate virtual environment**
