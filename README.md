@@ -53,6 +53,8 @@ This project is a Django Rest Framework (DRF) API that lets users submit and vie
    
    **Option B: Use existing database**
    - Ensure PostgreSQL is running
+  
+     
 
 5. **Create environment variables file**
    Create a `.env` file in the project root:
