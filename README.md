@@ -2,15 +2,11 @@
 
 This project is a Django Rest Framework (DRF) API that lets users submit and view KPA inspection form data. It uses PostgreSQL as the database. The API can be tested through Postman or Swagger UI.
 
-🛠️ Tech Stack Used
+###Tech Stack Used
+
 Python – Programming Language
-
 Django – Web Framework
-
 Django REST Framework – For building REST APIs
-
-DRF Spectacular – For generating Swagger/OpenAPI documentation
-
+DRF Spectacular – For generating Swagger documentation
 PostgreSQL – Database
-
 Swagger UI – API testing and visualization
