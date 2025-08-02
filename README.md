@@ -48,20 +48,13 @@ This project is a Django Rest Framework (DRF) API that lets users submit and vie
    
    **Option A: Create database manually**
    ```sql
-   -- Connect to PostgreSQL as superuser
-   psql -U postgres
-   
+ 
    -- Create database
    CREATE DATABASE kpa_db;
-   
-   -- Create user (optional)
-   CREATE USER kpa_user WITH PASSWORD 'your_password';
-   GRANT ALL PRIVILEGES ON DATABASE kpa_db TO kpa_user;
    ```
    
    **Option B: Use existing database**
    - Ensure PostgreSQL is running
-   - Note your database credentials
 
 5. **Create environment variables file**
    Create a `.env` file in the project root:
@@ -191,10 +184,8 @@ Retrieves wheel specification forms with optional filtering.
 
 **Endpoint**: `/api/forms/bogie-checksheet/`
 
-**Methods**: `GET`, `POST`, `HEAD`, `OPTIONS`
-
 #### POST - Create Bogie Checksheet
-Creates a new bogie checksheet inspection form.
+Creates a new bogie checksheet form.
 
 **Request Body**:
 ```json
@@ -242,9 +233,8 @@ Creates a new bogie checksheet inspection form.
 ```
 
 
-## Limitations & Assumptions
+## Limitations
 
-### Limitations
 1. **Authentication**: Currently no auth implemented
 2. **Validation**: Limited field validation 
 3. **File Uploads**: No support for attachment uploads (images, documents)
