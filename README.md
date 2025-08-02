@@ -105,6 +105,7 @@ This project is a Django Rest Framework (DRF) API that lets users submit and vie
    - Admin Panel: `http://localhost:8000/admin/`
    - API Documentation: `http://localhost:8000/api/docs/`
 
+
 ## API Endpoints
 
 ### 1. Wheel Specifications API
@@ -252,4 +253,16 @@ Creates a new bogie checksheet form.
 4. **Search**: Basic query parameter filtering only
 
 
+
+## Postman Collection
+
+This project includes a complete Postman collection for testing the implemented APIs.
+
+**Collection File**: `KPA_form data API.postman_collection`
+
+### How to Use
+1. Open **Postman**.
+2. Click **Import**.
+3. Select the file `KPA_form data API.postman_collection` from the root of this project.
+4. You'll see grouped API requests.
 
