@@ -246,10 +246,10 @@ Creates a new bogie checksheet form.
 
 ## Limitations
 
-1. **Authentication**: Currently no auth implemented
+1. **Authentication**: Currently not implemented
 2. **Validation**: Limited field validation 
-3. **File Uploads**: No support for attachment uploads (images, documents)
-4. **Search**: Basic filtering only 
+3. **File Uploads**: No supported
+4. **Search**: Basic query parameter filtering only
 
 
 
