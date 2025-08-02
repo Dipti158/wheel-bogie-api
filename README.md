@@ -172,7 +172,18 @@ Retrieves wheel specification forms with optional filtering.
       "fields": {
         "wheelGauge": "1600 (+2,-1)",
         "wheelProfile": "29.4 Flange Thickness",
-          ... other fields
+         "rimThickness": "32 mm",
+        "materialType": "Forged Steel",
+        "axleSize": "120 mm",
+        "brakeDiscType": "Solid",
+        "treadDiameterNew": "915 (900-1000)",
+        "lastShopIssueSize": "837 (800-900)",
+        "wheelMaterial": "Alloy Steel",
+        "rimType": "Flat Rim",
+        "inspectionDate": "2025-06-30",
+        "inspectedBy": "Inspector_456",
+        "remarks": "Slight wear on outer edge, within tolerance",
+        "location": "Assembly Line 3"
       },
       "status": "SAVED"
     }
